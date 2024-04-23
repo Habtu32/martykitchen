@@ -1,1 +1,47 @@
+/* Basic CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increase font size for mobile */
+}
+
+main {
+    padding: 1rem; /* Add padding for mobile */
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Media Query for responsiveness */
+@media (min-width: 600px) {
+    main {
+        padding: 2rem; /* Reset padding for larger screens */
+    }
+}
 
