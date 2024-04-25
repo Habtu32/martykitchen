@@ -7,15 +7,13 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <script src="script.js"></script>
 </head>
-<body class="bg-white font-sans">
-  <header class="flex justify-center items-center h-screen">
-    <div class="text-center">
-      <img src="images\logo.png" alt="Restaurant Logo" class="w-32 mx-auto mb-8">
-      <h1 class="text-4xl font-bold mb-4">Restaurant Name</h1>
-      <div class="flex justify-center space-x-4">
-        <button id="menu-button" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Menu</button>
-        <button id="ratings-button" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Ratings</button>
-      </div>
+<body class="font-sans">
+  <header class="flex flex-col justify-center items-center py-8 px-4 sm:px-6 lg:px-8 bg-gray-100">
+    <img src="logo.png" alt="Restaurant Logo" class="w-20 mx-auto mb-4 sm:w-32">
+    <h1 class="text-2xl font-bold sm:text-3xl">Restaurant Name</h1>
+    <div class="flex justify-center space-x-4 mt-4 sm:mt-6">
+      <button id="menu-button" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Menu</button>
+      <button id="ratings-button" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Ratings</button>
     </div>
   </header>
   <div id="menu-dropdown" class="absolute hidden top-0 left-0 w-full bg-white shadow-md z-10">
