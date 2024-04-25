@@ -1,3 +1,5 @@
+
+window.onload = function(){
 const menuButton = document.getElementById('menu-button');
 const menuDropdown = document.getElementById('menu-dropdown');
 
@@ -10,6 +12,7 @@ menuButton.addEventListener('click', () => {
 const menuList = document.querySelectorAll('#menu-dropdown a');
 
 menuList.forEach(menuItem => {
+const menuButton = document.getElementById('menu-dropdown');
   menuItem.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default link behavior (loading separate page)
 
@@ -37,4 +40,4 @@ function getMenuItems(category) {
   // Implement logic to fetch menu items from a database or server
   // This could involve AJAX or other methods depending on your setup
   return ["Example Item 1", "Example Item 2"]; // Placeholder for now
-}
+}}
