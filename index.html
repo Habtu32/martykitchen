@@ -1,3 +1,5 @@
+I apologize for the mistake. Let me try again. Here is the full code with the corrections and adjustments:
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +10,20 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Minimize CSS -->
     <style>
+      <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
         /* Additional CSS styles */
-       @media (max-width: 640px) {
+        @media (max-width: 640px) {
             .carousel {
-                display: flex;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
+                overflow-x: scroll;
+                white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
             }
             .carousel img {
-                flex: 0 0 auto;
-                width: 100%;
-                scroll-snap-align: start;
+                display: inline-block;
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                margin-right: 10px; /* Add some space between slides */
             }
         }
     </style>
@@ -32,10 +35,21 @@
             <!-- Carousel Content goes here -->
             <div class="relative">
                 <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
-                <div class="carousel">
-                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+1" alt="Slide 1">
-                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+2" alt="Slide 2">
-                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+3" alt="Slide 3">
+                <div class="carousel glider-contain">
+                    <div class="carousel-inner relative">
+                        <div class="carousel-item active">
+                            <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+1" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+2" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+3" alt="Slide 3">
+                        </div>
+                    </div>
+                    <button aria-label="Previous" class="carousel-prev"></button>
+                    <button aria-label="Next" class="carousel-next"></button>
+                    <div role="tablist" class="carousel-dots"></div>
                 </div>
             </div>
         </div>
@@ -74,24 +88,4 @@
         <footer class="text-center text-gray-600 mt-8">
             <p>Powered by <a href="#" class="text-blue-500 hover:underline">QRMenu</a></p>
         </footer>
-    </div>
-
-    <!-- Include JavaScript for Carousel -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var carousels = document.querySelectorAll('.carousel');
-            carousels.forEach(function(carousel){
-                new Glider(carousel, {
-                    slidesToShow: 1,
-                    dots: '.carousel-dots',
-                    draggable: true,
-                    arrows: {
-                        prev: '.carousel-prev',
-                        next: '.carousel-next'
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    </
