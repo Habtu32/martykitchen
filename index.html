@@ -9,6 +9,20 @@
     <!-- Minimize CSS -->
     <style>
         /* Additional CSS styles */
+       @media (max-width: 640px) {
+            .carousel {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+            .carousel img {
+                flex: 0 0 auto;
+                width: 100%;
+                scroll-snap-align: start;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100">
