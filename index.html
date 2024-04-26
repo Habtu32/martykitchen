@@ -6,32 +6,38 @@
     <title>Restaurant Menu</title>
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Minimize CSS -->
+    <style>
+        /* Additional CSS styles */
+    </style>
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto py-4">
-        <!-- Banner -->
-        <div class="mb-6">
-            <!-- Your banner content goes here -->
-            <img src="images/Banner.jpeg" alt="Banner Image" class="w-full h-auto rounded-lg">
-        </div>
-        
-        <!-- Logo -->
-        <div class="text-center mb-6">
-            <img src="images/logo.png" alt="Restaurant Logo" class="w-24 h-24 mx-auto">
+        <!-- Carousel Section -->
+        <div class="mb-8">
+            <!-- Carousel Content goes here -->
+            <div class="relative">
+                <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+                <div class="carousel">
+                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+1" alt="Slide 1">
+                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+2" alt="Slide 2">
+                    <img class="w-full" src="https://via.placeholder.com/1200x400?text=Slide+3" alt="Slide 3">
+                </div>
+            </div>
         </div>
 
         <!-- Navigation -->
-        <nav class="flex justify-center mb-6">
+        <nav class="flex justify-center mb-8">
             <!-- Food Menu Link -->
-            <a href="#" class="text-gray-700 font-semibold text-lg px-4 hover:text-gray-900">Food Menu</a>
+            <a href="#" class="text-gray-700 font-semibold text-lg mx-4 hover:text-gray-900">Food Menu</a>
             <!-- Rating Option Link -->
-            <a href="#" class="text-gray-700 font-semibold text-lg px-4 hover:text-gray-900">Ratings</a>
+            <a href="#" class="text-gray-700 font-semibold text-lg mx-4 hover:text-gray-900">Ratings</a>
         </nav>
 
         <!-- Content -->
-        <div class="bg-white p-4 shadow rounded-lg">
+        <div class="bg-white p-6 shadow rounded-lg">
             <!-- Menu Categories -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                 <a href="#" class="text-center text-sm text-gray-800 font-semibold py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 transition duration-300 ease-in-out">Appetizers</a>
                 <a href="#" class="text-center text-sm text-gray-800 font-semibold py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 transition duration-300 ease-in-out">Main Course</a>
                 <a href="#" class="text-center text-sm text-gray-800 font-semibold py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300 transition duration-300 ease-in-out">Desserts</a>
@@ -55,5 +61,23 @@
             <p>Powered by <a href="#" class="text-blue-500 hover:underline">QRMenu</a></p>
         </footer>
     </div>
+
+    <!-- Include JavaScript for Carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousels = document.querySelectorAll('.carousel');
+            carousels.forEach(function(carousel){
+                new Glider(carousel, {
+                    slidesToShow: 1,
+                    dots: '.carousel-dots',
+                    draggable: true,
+                    arrows: {
+                        prev: '.carousel-prev',
+                        next: '.carousel-next'
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
