@@ -48,7 +48,6 @@
             overflow: hidden;
             position: relative;
             margin-bottom: 20px;
-            width: auto; /* Set slider width to auto */
             height: 300px; /* Set slider height */
         }
 
@@ -76,14 +75,15 @@
 </head>
 <body>
 
-    <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center fixed top-0 w-full z-10">
+        <img src="https://via.placeholder.com/150x50" alt="Restaurant Logo" class="h-10">
         <h1 class="text-3xl font-semibold text-gray-800">Restaurant Name</h1>
-        <a href="#" class="order-button order-button-fixed">Order Now</a>
+        <a href="#" class="order-button">Order Now</a>
     </header>
 
-    <div class="slider" style="height: 300px;">
+    <div class="slider">
         <div class="slides">
-            <div class="slide"><img src="https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126"></div>
+            <div class="slide"><img src="https://via.placeholder.com/1200x300" alt="Slider Image"></div>
             <!-- Add more slider images here -->
         </div>
     </div>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="grid grid-cols-2 gap-4 hidden" id="breakfastMenu">
                     <div class="flex items-center mb-4">
-                        <img src="https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126" class="w-16 h-16 object-cover mr-2">
+                        <img src="https://your-restaurant-domain.com/breakfast-item1.jpg" alt="Breakfast Item" class="w-16 h-16 object-cover mr-2">
                         <div>
                             <h3 class="text-base font-semibold text-gray-800 mb-1">Eggs Benedict</h3>
                             <p class="text-gray-600">$9.99</p>
