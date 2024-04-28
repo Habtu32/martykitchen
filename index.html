@@ -42,14 +42,49 @@
         }
 
         /* Add more custom styles as needed */
+
+        .slider {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .order-button-fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
 
     <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
         <h1 class="text-3xl font-semibold text-gray-800">Restaurant Name</h1>
-        <a href="#" class="order-button">Order Now</a>
+        <a href="#" class="order-button order-button-fixed">Order Now</a>
     </header>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://via.placeholder.com/1200x300" alt="Slider Image"></div>
+            <!-- Add more slider images here -->
+        </div>
+    </div>
 
     <main class="container mx-auto py-8 px-6">
 
