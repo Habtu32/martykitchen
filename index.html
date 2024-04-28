@@ -75,12 +75,6 @@
 </head>
 <body>
 
-    <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center fixed top-0 w-full z-10">
-        <img src="https://via.placeholder.com/150x50" alt="Restaurant Logo" class="h-10">
-        <h1 class="text-3xl font-semibold text-gray-800">Restaurant Name</h1>
-        <a href="#" class="order-button">Order Now</a>
-    </header>
-
     <div class="slider">
         <div class="slides">
             <div class="slide"><img src="https://via.placeholder.com/1200x300" alt="Slider Image"></div>
@@ -88,16 +82,22 @@
         </div>
     </div>
 
+    <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center w-full z-10">
+        <img src="https://via.placeholder.com/150x50" alt="Restaurant Logo" class="h-10">
+        <h1 class="text-3xl font-semibold text-gray-800">Restaurant Name</h1>
+        <a href="#" class="order-button">Order Now</a>
+    </header>
+
     <main class="container mx-auto py-8 px-6">
 
-        <section class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section class="mb-8 grid grid-cols-1 gap-4">
 
             <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer" onclick="toggleMenu('breakfastMenu')">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-lg font-semibold text-gray-800">Breakfast</h2>
                     <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="grid grid-cols-2 gap-4 hidden" id="breakfastMenu">
+                <div class="grid grid-cols-1 gap-4 hidden" id="breakfastMenu">
                     <div class="flex items-center mb-4">
                         <img src="https://your-restaurant-domain.com/breakfast-item1.jpg" alt="Breakfast Item" class="w-16 h-16 object-cover mr-2">
                         <div>
@@ -114,7 +114,7 @@
                     <h2 class="text-lg font-semibold text-gray-800">Lunch</h2>
                     <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="grid grid-cols-2 gap-4 hidden" id="lunchMenu">
+                <div class="grid grid-cols-1 gap-4 hidden" id="lunchMenu">
                     <!-- Lunch menu items will be dynamically loaded here -->
                 </div>
             </div>
