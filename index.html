@@ -11,13 +11,15 @@
         body {
             font-family: 'Open Sans', sans-serif; /* Example font */
             background-color: #f5f5f5; /* Light background */
+            margin: 0;
+            padding: 0;
         }
 
         .header {
             background-image: url("https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126"); /* Replace with your header image URL */
             background-size: cover; /* Ensure image covers the entire header */
             background-position: center; /* Center the image horizontally and vertically */
-            height: 300px; /* Adjust header height as needed */
+            height: 300px; /* Fixed header height */
             display: flex; /* Allow for content positioning within the header */
             justify-content: center; /* Center content horizontally within the header */
             align-items: flex-end; /* Align content at the bottom of the header */
@@ -26,9 +28,23 @@
         }
 
         .header h1 {
-            font-size: 3xl; /* Adjust heading size as needed */
+            font-size: 3rem; /* Adjust heading size as needed */
             text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
             margin: 0; /* Remove default margin for better positioning */
+        }
+
+        .order-button {
+            background-color: #38b2ac; /* Brand color for button */
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .order-button:hover {
+            background-color: #2e9caa; /* Darken button on hover */
         }
 
         .menu-category {
@@ -45,44 +61,29 @@
         .menu-item img {
             border-radius: 50%; /* Round image corners */
         }
-
-        .order-button {
-            background-color: #38b2ac; /* Brand color for button */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .order-button:hover {
-            background-color: #2e9caa; /* Darken button on hover */
-        }
-
-        /* Add more custom styles as needed */
     </style>
 </head>
 
 <body>
 
     <header class="header">
-        <h1>Restaurant Name</h1>
-        <a href="#" class="order-button mt-4">Order Now</a>
+        <h1 class="text-5xl font-bold">Restaurant Name</h1>
+        <button class="order-button mt-4">Order Now</button>
     </header>
 
     <main class="container mx-auto py-8 px-6">
 
         <section class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer">
+            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer"
+                onclick="toggleMenu('breakfastMenu')">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-lg font-semibold text-gray-800">Breakfast</h2>
                     <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"><path
                             d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4 hidden" id="breakfastMenu">
                     <div class="flex items-center mb-4">
                         <img src="https://your-restaurant-domain.com/breakfast-item1.jpg"
                             alt="Breakfast Item" class="w-16 h-16 object-cover mr-2">
@@ -95,14 +96,15 @@
                 </div>
             </div>
 
-            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer">
+            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer"
+                onclick="toggleMenu('lunchMenu')">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-lg font-semibold text-gray-800">Lunch</h2>
                     <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"><path
                             d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4 hidden" id="lunchMenu">
                     <!-- Lunch menu items will be dynamically loaded here -->
                 </div>
             </div>
