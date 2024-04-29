@@ -1,194 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Digital Menu</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Add some basic styling */
-
+        /* Custom styles for branding and aesthetics */
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Open Sans', sans-serif; /* Example font */
+            background-color: #f5f5f5; /* Light background */
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+        .header {
+            background-image: url("https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126"); /* Replace with your header image URL */
+            background-size: cover; /* Ensure image covers the entire header */
+            background-position: center; /* Center the image horizontally and vertically */
+            height: 300px; /* Adjust header height as needed */
+            display: flex; /* Allow for content positioning within the header */
+            justify-content: center; /* Center content horizontally within the header */
+            align-items: flex-end; /* Align content at the bottom of the header */
+            color: white; /* Set text color for good contrast with dark backgrounds */
+            padding-bottom: 40px; /* Add some padding below content */
+        }
+
+        .header h1 {
+            font-size: 3xl; /* Adjust heading size as needed */
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+            margin: 0; /* Remove default margin for better positioning */
         }
 
         .menu-category {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* Menu category background */
+            border: 1px solid #ddd; /* Light border */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
         }
 
         .menu-category:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .menu-item {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
+            transform: translateY(-3px); /* Subtle hover lift */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light hover shadow */
         }
 
         .menu-item img {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
-        }
-
-        .menu-item h3 {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .menu-item p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .slider {
-            height: 500px;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border-radius: 50%; /* Round image corners */
         }
 
         .order-button {
-            background-color: #333;
+            background-color: #38b2ac; /* Brand color for button */
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .order-button:hover {
-            background-color: #444;
+            background-color: #2e9caa; /* Darken button on hover */
         }
 
-        .feedback-form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .feedback-form label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .feedback-form textarea {
-            width: 100%;
-            height: 100px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .feedback-form button[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .feedback-form button[type="submit"]:hover {
-            background-color: #444;
-        }
+        /* Add more custom styles as needed */
     </style>
 </head>
+
 <body>
 
-    <header>
+    <header class="header">
         <h1>Restaurant Name</h1>
+        <a href="#" class="order-button mt-4">Order Now</a>
     </header>
 
     <main class="container mx-auto py-8 px-6">
-        <section class="mb-8 grid grid-cols-1 gap-4">
-            <div class="menu-category">
+
+        <section class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-lg font-semibold text-gray-800">Breakfast</h2>
-                    <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"><path
+                            d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div class="menu-item">
-                        <img src="https://your-restaurant-domain.com/breakfast-item1.jpg" alt="Breakfast Item">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center mb-4">
+                        <img src="https://your-restaurant-domain.com/breakfast-item1.jpg"
+                            alt="Breakfast Item" class="w-16 h-16 object-cover mr-2">
                         <div>
-                            <h3>Eggs Benedict</h3>
-                            <p>$9.99</p>
+                            <h3 class="text-base font-semibold text-gray-800 mb-1">Eggs Benedict</h3>
+                            <p class="text-gray-600">$9.99</p>
                         </div>
                     </div>
                     <!-- Repeat the above structure for each breakfast item -->
-                    <div class="menu-item">
-                        <img src="https://your-restaurant-domain.com/breakfast-item1.jpg" alt="Breakfast Item">
-                        <div>
-                            <h3>Eggs Benedict</h3>
-                            <p>$9.99</p>
-                        </div>
                 </div>
             </div>
 
-            <!-- Repeat the above structure for other categories like Lunch, Dinner, Soft Drinks, etc. -->
-        </section>
-
-        <section class="mb-8">
-                   <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="https://via.placeholder.com/1200x500" alt="Slider Image"></div>
-                    <!-- Add more slider images here -->
+            <div class="menu-category rounded-lg p-4 overflow-hidden cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-lg font-semibold text-gray-800">Lunch</h2>
+                    <svg class="w-6 h-6 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"><path
+                            d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Lunch menu items will be dynamically loaded here -->
                 </div>
             </div>
+            <!-- Repeat the above structure for other categories like Dinner, Soft Drinks, etc. -->
+
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Promotions</h2>
-            <p class="text-gray-700 mb-4">Check out our latest promotions and discounts!</p>
-            <div class="bg-white rounded-lg shadow-md p-4">
-                <h3 class="text-xl font-semibold mb-2">Special Discount</h3>
-                <p class="text-gray-700 mb-2">Get 10% off on your order with code SPECIAL10.</p>
-                <p class="text-gray-600">Valid until DD/MM/YYYY.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-2xl font-semibold mb-4">Feedback</h2>
-            <p class="text-gray-700 mb-4">We'd love to hear from you! Share your feedback below.</p>
-            <form action="#" method="post" class="feedback-form">
-                <div class="mb-4">
-                    <label for="feedback" class="block text-gray-700 font-semibold mb-2">Your Feedback</label>
-                    <textarea name="feedback" id="feedback" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"></textarea>
-                </div>
-                <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Submit Feedback</button>
-            </form>
-        </section>
     </main>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Promotions</h2>
+        <p class="text-gray-700 mb-4">Check out our latest promotions and discounts!</p>
+        <div class="bg-white rounded-lg shadow-md p-4">
+            <h3 class="text-xl font-semibold mb-2">Special Discount</h3>
+            <p class="text-gray-700 mb-2">Get 10% off on your order with code SPECIAL10.</p>
+            <p class="text-gray-600">Valid until DD/MM/YYYY.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">Feedback</h2>
+        <p class="text-gray-700 mb-4">We'd love to hear from you! Share your feedback below.</p>
+        <form action="#" method="post" class="bg-white rounded-lg shadow-md p-4">
+            <div class="mb-4">
+                <label for="feedback" class="block text-gray-700 font-semibold mb-2">Your Feedback</label>
+                <textarea name="feedback" id="feedback" rows="4"
+                    class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+            <button type="submit" class="order-button">Submit Feedback</button>
+        </form>
+    </section>
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu(menuId) {
+            const menu = document.getElementById(menuId);
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
 </body>
+
 </html>
