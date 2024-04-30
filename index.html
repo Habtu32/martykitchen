@@ -19,7 +19,7 @@
             background-image: url('https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126'); /* Background image */
             background-size: cover; /* Ensure image covers the entire header */
             background-position: center; /* Center the image horizontally and vertically */
-            height: 200px; /* Fixed header height */
+            height: 300px; /* Fixed header height */
             position: relative; /* Position relative for absolute positioning within */
         }
 
@@ -28,14 +28,18 @@
             bottom: 0; /* Align at the bottom of the header */
             left: 0; /* Align at the left of the header */
             width: 100%; /* Full width */
-            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
             padding: 20px; /* Add padding to the content */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space items evenly */
+            align-items: center; /* Center items vertically */
         }
 
         .restaurant-name {
-            font-size: 2rem; /* Adjust font size */
+            font-size: 3rem; /* Adjust font size */
             color: #0F9D58; /* Green font color */
-            margin-bottom: 10px; /* Add spacing below the restaurant name */
+            margin: 0; /* Remove default margin */
+            text-align: right; /* Align restaurant name to the right */
         }
 
         .order-button {
@@ -46,6 +50,7 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
+            margin: 0; /* Remove default margin */
         }
 
         .order-button:hover {
@@ -71,10 +76,10 @@
 
 <body>
 
-    <header class="header">
-        <div class="header-content">
-            <h1 class="restaurant-name">Restaurant Name</h1>
-            <button class="order-button">Order Now</button>
+    <header class="header relative">
+        <div class="header-content bg-green-500 bg-opacity-80 p-8 text-white w-full flex justify-between">
+            <h1 class="restaurant-name ml-auto">Restaurant Name</h1>
+            <button class="order-button mr-auto">Order Now</button>
         </div>
     </header>
 
