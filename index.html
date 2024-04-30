@@ -16,21 +16,26 @@
         }
 
         .header {
-            background-image: url("https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126"); /* Replace with your header image URL */
+            background-image: url('https://cdn.dopweb.com/qrmenu/banner-per-industry/restaurant/light/BannerOption1.jpeg?q=06407664307146126'); /* Background image */
             background-size: cover; /* Ensure image covers the entire header */
             background-position: center; /* Center the image horizontally and vertically */
             height: 200px; /* Fixed header height */
-            display: flex; /* Allow for content positioning within the header */
-            justify-content: center; /* Center content horizontally within the header */
-            align-items: flex-end; /* Align content at the bottom of the header */
-            color: white; /* Set text color for good contrast with dark backgrounds */
-            padding-bottom: 40px; /* Add some padding below content */
+            position: relative; /* Position relative for absolute positioning within */
         }
 
-        .header h1 {
-            font-size: 3rem; /* Adjust heading size as needed */
-            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
-            margin: 0; /* Remove default margin for better positioning */
+        .header-content {
+            position: absolute; /* Position absolute to place at bottom */
+            bottom: 0; /* Align at the bottom of the header */
+            left: 0; /* Align at the left of the header */
+            width: 100%; /* Full width */
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 20px; /* Add padding to the content */
+        }
+
+        .restaurant-name {
+            font-size: 2rem; /* Adjust font size */
+            color: #0F9D58; /* Green font color */
+            margin-bottom: 10px; /* Add spacing below the restaurant name */
         }
 
         .order-button {
@@ -67,8 +72,10 @@
 <body>
 
     <header class="header">
-        <h1 class="text-5xl font-bold">Restaurant Name</h1>
-        <button class="order-button mt-4">Order Now</button>
+        <div class="header-content">
+            <h1 class="restaurant-name">Restaurant Name</h1>
+            <button class="order-button">Order Now</button>
+        </div>
     </header>
 
     <main class="container mx-auto py-8 px-6">
